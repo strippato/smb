@@ -29,9 +29,9 @@
 #define LIM(X,Y) ((X) > (Y) ? (Y) : (X))
 #define RND(x) ((float)x * rand())/(RAND_MAX+1.00)
 
-inline float posval(float x);
-inline float negval(float x);
-inline SDL_bool Collide(long int ax1, long int ay1, long int ax2, long int ay2,
+float posval(float x);
+float negval(float x);
+SDL_bool Collide(long int ax1, long int ay1, long int ax2, long int ay2,
 		        long int bx1, long int by1, long int bx2, long int by2);
 
 #endif

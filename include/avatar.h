@@ -28,7 +28,7 @@
 #define AVATAR_SPRITE2 "data/avatar/avatar2.png"
 #define AVATAR_SPRITE3 "data/avatar/avatar3.png"
 
-#define AVATAR_SIZE    32  
+#define AVATAR_SIZE    32
 
 enum avatar_lookat_t {
 	AVATAR_DX,
@@ -37,7 +37,7 @@ enum avatar_lookat_t {
 
 enum avatar_state_t {
 	AVATAR_STAY,
-	AVATAR_RUN,	
+	AVATAR_RUN,
 	AVATAR_JUMP,
 	AVATAR_LINKIN,
 	AVATAR_LINKOUT,
@@ -48,8 +48,8 @@ struct avatar_t {
 	SDL_bool enabled;
 	SDL_bool visible;
 	SDL_Surface *sprite;
-	char *name;	
-	
+	char *name;
+
 	short int life;
 	unsigned long  int score;
 	unsigned short int coin;
@@ -64,11 +64,11 @@ struct avatar_t {
 
 	float old_vx;
 	float old_vy;
-	
+
 	/* avatar 2 avatar reactions */
 	float react_vx;
 	float react_vy;
-	
+
 	enum input_device_t  device;
 	enum avatar_lookat_t lookat;
 	enum avatar_state_t state;
@@ -78,20 +78,20 @@ struct avatar_t {
 	/* animated sprite key frame*/
 	float kf_age;
 	int   kf;
-	
+
 	/* text */
 	SDL_Surface *text;
 	SDL_Surface *textbk;
 	SDL_Surface *textbox;
 	int text_ttl;
 	int text_fadein;
-	
+
 	/* afk */
 	int afk;
-	
+
 	/* state-related */
 	long int isdying;
-	
+
 	/* inlink timer */
 	long int linktimer;
 	/* link */
@@ -108,13 +108,13 @@ float avatar_Get_x (int player);
 float avatar_Get_y (int player);
 float avatar_Get_vx(int player);
 float avatar_Get_vy(int player);
-void  avatar_Add(int i, char *name, const char *filename, enum input_device_t device, int life); 
+void  avatar_Add(int i, char *name, const char *filename, enum input_device_t device, int life);
 void  avatar_PlayerHome(void);
 void  avatar_RespawnAll(void);
 void  avatar_Respawn(int i);
 void  avatar_AddCoin(int player);
-inline void  avatar_AddPoint(int player, unsigned int);
-inline void  avatar_AddLife(int player, int life);
+void  avatar_AddPoint(int player, unsigned int);
+void  avatar_AddLife(int player, int life);
 void avatar_Say(int i, char *text, int ttl);
 void avatar_SayAll(char *text);
 void avatar_Kill(int player);

@@ -25,7 +25,7 @@
 
 typedef enum
 {
-		SND_NO_MUSIC, 
+		SND_NO_MUSIC,
 		SND_NORMAL_MUSIC,
 		SND_HURRYUP_MUSIC,
 		SND_FAST_MUSIC
@@ -51,16 +51,16 @@ void sound_MusicUnload(void);
 void sound_MusicPlay(sound_music_t music);
 void sound_SfxLoad(sound_sfx_t sfx, char *filename);
 void sound_SfxUnload(sound_sfx_t sfx);
-void sound_SfxPlay(sound_sfx_t sfx);  
+void sound_SfxPlay(sound_sfx_t sfx);
 void sound_SfxPlayTimed(sound_sfx_t sfx, int ticks);
 
 Mix_Chunk *sound_SfxDirectLoad(const char *filename);
-void sound_SfxDirectUnload(Mix_Chunk *sound); 
-inline void sound_SfxDirectPlay(Mix_Chunk *sound);
+void sound_SfxDirectUnload(Mix_Chunk *sound);
+void sound_SfxDirectPlay(Mix_Chunk *sound);
 
 Mix_Music *sound_MusicDirectLoad(const char *filename);
-void sound_MusicDirectUnload(Mix_Music *music); 
-inline void sound_MusicDirectPlay(Mix_Music *music);
+void sound_MusicDirectUnload(Mix_Music *music);
+void sound_MusicDirectPlay(Mix_Music *music);
 void sound_MusicFade(Uint32 msec);
 #endif
 

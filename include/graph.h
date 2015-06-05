@@ -35,12 +35,12 @@ struct graph_vec2_t {
 
 void graph_Init(void);
 void graph_Free(void);
-inline void graph_Flip(void);
+void graph_Flip(void);
 void graph_ScreenShot (void);
 void graph_Fade2Black(Uint32 msec);
 void graph_ToggleFullScreen(void);
-inline Uint32 graph_getpixel(SDL_Surface *surface, int x, int y);
-inline void graph_putpixel(SDL_Surface *surface, int x, int y, Uint32 pixel);
+Uint32 graph_getpixel(SDL_Surface *surface, int x, int y);
+void graph_putpixel(SDL_Surface *surface, int x, int y, Uint32 pixel);
 
 #endif
 

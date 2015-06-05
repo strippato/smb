@@ -5,7 +5,7 @@
 #Program('smb', Glob('src/*.c'), CFLAGS = Split("-mtune=native -W -Wall -pedantic -Wmissing-prototypes -D_GNU_SOURCE=1 -D_REENTRANT") ,CPPPATH = 'include:/usr/include/SDL', LIBS='m:pthread:SDL:SDL_image:SDL_ttf:SDL_mixer:config')
 
 #OPT O3
-#Program('smb', Glob('src/*.c'), CFLAGS = Split("-mtune=native -O3 -W -Wall -pedantic -Wmissing-prototypes -D_GNU_SOURCE=1 -D_REENTRANT") ,CPPPATH = 'include:/usr/include/SDL', LIBS='m:pthread:SDL:SDL_image:SDL_ttf:SDL_mixer:config')
+Program('smb', Glob('src/*.c'), CFLAGS = Split("-mtune=native -O3 -W -Wall -pedantic -Wmissing-prototypes -D_GNU_SOURCE=1 -D_REENTRANT") ,CPPPATH = 'include:/usr/include/SDL', LIBS='m:pthread:SDL:SDL_image:SDL_ttf:SDL_mixer:config')
 
 #OPT O3 + FAST
 #Program('smb', Glob('src/*.c'), CFLAGS = Split("-mtune=native -O3 -ffast-math -W -Wall -pedantic -Wmissing-prototypes -D_GNU_SOURCE=1 -D_REENTRANT") ,CPPPATH = 'include:/usr/include/SDL', LIBS='m:pthread:SDL:SDL_image:SDL_ttf:SDL_mixer:config')
@@ -14,7 +14,7 @@
 #Program('smb', Glob('src/*.c'), CFLAGS = Split("-mtune=native -O3 -ffast-math -msse -mfpmath=sse -W -Wall -pedantic -Wmissing-prototypes -D_GNU_SOURCE=1 -D_REENTRANT") ,CPPPATH = 'include:/usr/include/SDL', LIBS='m:pthread:SDL:SDL_image:SDL_ttf:SDL_mixer:config')
 
 #OPT O3 + FAST + SSE2
-Program('smb', Glob('src/*.c'), CFLAGS = Split("-mtune=native -O3 -ffast-math -msse2 -mfpmath=sse -W -Wall -pedantic -Wmissing-prototypes -D_GNU_SOURCE=1 -D_REENTRANT") ,CPPPATH = 'include:/usr/include/SDL', LIBS='m:pthread:SDL:SDL_image:SDL_ttf:SDL_mixer:config')
+#Program('smb', Glob('src/*.c'), CFLAGS = Split("-mtune=native -O3 -ffast-math -msse2 -mfpmath=sse -W -Wall -pedantic -Wmissing-prototypes -D_GNU_SOURCE=1 -D_REENTRANT") ,CPPPATH = 'include:/usr/include/SDL', LIBS='m:pthread:SDL:SDL_image:SDL_ttf:SDL_mixer:config')
 
 # WIIMOTE SUPPORT: need libcwiimote and the bluetooth stack (blueZ?!?)
 #OPT O3 + FAST + SSE2

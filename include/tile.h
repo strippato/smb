@@ -30,7 +30,7 @@ enum tile_class_t {
 	TILE_SOLID,
 	TILE_SOLID_BREAKABLE,
 	TILE_SOLID_FIXED,
-	TILE_MORTAL,	
+	TILE_MORTAL,
 	TILE_COIN,
 	TILE_LINK_UP,
 	TILE_LINK_DOWN,
@@ -42,7 +42,7 @@ struct tile_t {
 	SDL_Surface *Tile;
 	enum tile_class_t Class;
 	SDL_bool Anim;
-	short int KeyFrame; 
+	short int KeyFrame;
 	unsigned short int TickToNext;
 	unsigned short int TickFrame;
 	unsigned short int MaxFrame;
@@ -52,10 +52,10 @@ struct tile_t {
 	unsigned short int BBoxy;
 	unsigned short int BBoxw;
 	unsigned short int BBoxh;
-	
+
 	Mix_Chunk *HitSound;
-	unsigned int HitPoint;		
-	
+	unsigned int HitPoint;
+
 	/* only for link class*/
 	Mix_Chunk *LinkSound;
 };
@@ -69,9 +69,9 @@ void tile_Load(char *TileName, enum tile_class_t class, unsigned int hitpoint, c
 void tile_bk_Load(char *TileName, long int tick);
 void tile_Tick(void);
 short int tile_MaxTile(void);
-inline void tile_GetBBox(long int i, long int *ax, long int *ay, long int *bx, long int *by);
-inline void tile_GetBBoxLinkX(long int i, long int *ax, long int *ay, long int *bx, long int *by);
-inline void tile_GetBBoxLinkY(long int i, long int *ax, long int *ay, long int *bx, long int *by);
- 
+void tile_GetBBox(long int i, long int *ax, long int *ay, long int *bx, long int *by);
+void tile_GetBBoxLinkX(long int i, long int *ax, long int *ay, long int *bx, long int *by);
+void tile_GetBBoxLinkY(long int i, long int *ax, long int *ay, long int *bx, long int *by);
+
 #endif
 
